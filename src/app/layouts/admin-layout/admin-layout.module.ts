@@ -19,6 +19,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
 import { NgApexchartsModule } from "ng-apexcharts";
 import {AgGridModule} from "ag-grid-angular";
+import { ChartsComponent } from 'app/charts/charts.component';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 @NgModule({
   imports: [
@@ -33,7 +35,10 @@ import {AgGridModule} from "ag-grid-angular";
     MatSelectModule,
     MatTooltipModule,
     NgApexchartsModule,
-    AgGridModule
+    AgGridModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts'),
+    }),
   ],
   declarations: [
     DashboardComponent,
@@ -44,6 +49,7 @@ import {AgGridModule} from "ag-grid-angular";
     MapsComponent,
     NotificationsComponent,
     UpgradeComponent,
+    ChartsComponent
   ]
 })
 

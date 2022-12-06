@@ -22,8 +22,7 @@ import { AgGridModule } from 'ag-grid-angular';
   ],
   declarations: [
     AppComponent,
-    AdminLayoutComponent,
-
+    AdminLayoutComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
