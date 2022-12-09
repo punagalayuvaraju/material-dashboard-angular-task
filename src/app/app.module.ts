@@ -8,6 +8,7 @@ import { ComponentsModule } from './components/components.module';
 import { AppComponent } from './app.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { AgGridModule } from 'ag-grid-angular';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 @NgModule({
   imports: [
@@ -18,7 +19,15 @@ import { AgGridModule } from 'ag-grid-angular';
     ComponentsModule,
     RouterModule,
     AppRoutingModule,
-    AgGridModule
+    AgGridModule,
+    NgxEchartsModule.forRoot({
+      /**
+       * This will import all modules from echarts.
+       * If you only need custom modules,
+       * please refer to [Custom Build] section.
+       */
+      echarts: () => import('echarts'), // or import('./path-to-my-custom-echarts')
+    }),
   ],
   declarations: [
     AppComponent,
