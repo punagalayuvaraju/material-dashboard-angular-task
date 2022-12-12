@@ -97,7 +97,7 @@ export class ChartsComponent implements OnInit {
           {
             left: '10%',
             right: '8%',
-            top: '63%',
+            top: '40%',
             height: '16%'
           }
         ],
